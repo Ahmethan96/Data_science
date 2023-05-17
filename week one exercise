@@ -1,0 +1,12 @@
+This function should add the two values if the value of the "kind" parameter is "add" or is not passed in, otherwise it should subtract the second value from the first. 
+
+Can you fix the function so that it works?
+
+
+def do_math(a, b, kind = None):
+  if (kind=='add'):
+    return a+b
+  else:
+    return a-b
+
+do_math(1, 2, "add")
