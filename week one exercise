@@ -11,3 +11,10 @@ def do_math(a, b, kind = None):
 
 do_math(1, 2, "add")
 ##############################################
+
+What would be an appropriate slice to get the name "Christopher" from the string "Dr. Christopher Brooks"?
+
+x = 'Dr. Christopher Brooks'
+
+print(x[3:15])
+##############################################
