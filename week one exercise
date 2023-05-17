@@ -10,3 +10,4 @@ def do_math(a, b, kind = None):
     return a-b
 
 do_math(1, 2, "add")
+##############################################
