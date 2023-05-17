@@ -18,3 +18,17 @@ x = 'Dr. Christopher Brooks'
 
 print(x[3:15])
 ##############################################
+
+sales_record = {"price": 3.24,
+                "num_item": 4,
+                "person": "ibo"}
+
+sales_statement = " {} bought {} items(s) at a price of {} each for a total of {}"
+# print(sales_statement)
+# print(sales_record)
+
+print(sales_statement.format(sales_record["person"],
+                            sales_record["num_item"],
+                            sales_record["price"],
+                            sales_record["num_item"] * sales_record["price"]))
+##############################################                            
