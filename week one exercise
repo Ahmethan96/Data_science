@@ -39,6 +39,26 @@ ibo bought 4 items(s) at a price of 3.24 each for a total of 12.96
 map() function returns a map object(which is an iterator) 
 of the results after applying the given function to each item of a given iterable (list, tuple etc.) Syntax :
 map(fun, iter)
+////////////////////////////////////////////////////
+basic metohd to map a function 
+
+def addtion(n, m):
+    return n+m
+
+lis = [(1, 2), (3, 4), (5, 6)]
+
+print([addtion(n, m) for n,m in lis])
+
+def addtion_2(w):
+    return w + w
+
+lis_2 = [1, 2, 3, 4, 5]
+
+print([addtion_2(w) for w in lis_2])
+
+results: 
+[3, 7, 11]
+[2, 4, 6, 8, 10]
 
 ////////////////////////////////////////////////////
 store1 = [10, 11, 12, 3]
