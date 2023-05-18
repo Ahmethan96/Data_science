@@ -31,4 +31,38 @@ print(sales_statement.format(sales_record["person"],
                             sales_record["num_item"],
                             sales_record["price"],
                             sales_record["num_item"] * sales_record["price"]))
+results:
+ibo bought 4 items(s) at a price of 3.24 each for a total of 12.96
 ##############################################                            
+
+            *** map function ***
+
+store1 = [10, 11, 12, 3]
+store2 = [9, 10, 2, 14]
+cheapest = map(min, store1, store2)
+expensive = map(max, store1, store2)
+print(type(cheapest))
+print(list(cheapest))
+print(list(expensive))
+
+resutls:
+<class 'map'>
+[9, 10, 2, 3]
+[10, 11, 12, 14]
+##############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
