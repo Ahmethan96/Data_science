@@ -40,7 +40,7 @@ map() function returns a map object(which is an iterator)
 of the results after applying the given function to each item of a given iterable (list, tuple etc.) Syntax :
 map(fun, iter)
 
-
+////////////////////////////////////////////////////
 store1 = [10, 11, 12, 3]
 store2 = [9, 10, 2, 14]
 cheapest = map(min, store1, store2)
@@ -53,7 +53,7 @@ resutls:
 <class 'map'>
 [9, 10, 2, 3]
 [10, 11, 12, 14]
-
+//////////////////////////////////////////////////
 def even_or_odd(num):
     if num%2 == 0:
         return "The number {} is Even".format(num)
@@ -70,6 +70,18 @@ results:
 ['The number 1 is Odd', 'The number 2 is Even', 'The number 3 is Odd', 'The number 4 is Even', 'The number 5 is Odd', 
 'The number 6 is Even', 'The number 7 is Odd', 'The number 8 is Even', 'The number 9 is Odd', 'The number 10 is Even', 
 'The number 20 is Even', 'The number 25 is Odd', 'The number 30 is Even']
+//////////////////////////////////////////////////
+def add_sub(a,b):
+    add = a + b
+    sub = a - b
+    return "the addition is {} and subtraction is {}".format(a,b)
+
+print(add_sub(5,3))
+print(list(map(add_sub, [5],[3])))
+
+results
+the addition is 5 and subtraction is 3
+['the addition is 5 and subtraction is 3']
 
 ##############################################
 
