@@ -64,7 +64,7 @@ print(even_or_odd(5))
 
 list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 25, 30]
 
-print(list(map(even_or_odd, list1)))
+print(list(map(even_or_odd, list1))) ===(both will give same result)=== print([even_or_odd(num) for num in list1]) 
 
 results:
 ['The number 1 is Odd', 'The number 2 is Even', 'The number 3 is Odd', 'The number 4 is Even', 'The number 5 is Odd', 
