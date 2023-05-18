@@ -119,6 +119,18 @@ list(map(split_title_and_name, people))
 
 
 
+##############################################
+enumerate function
+
+fruits = ['apple', 'banana', 'cherry']
+
+for index, value in enumerate(fruits):
+    print(f"At index {index}: {value}")
+    
+results:
+At index 0: apple
+At index 1: banana
+At index 2: cherry
 
 
 
