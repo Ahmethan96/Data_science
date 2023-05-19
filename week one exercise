@@ -39,6 +39,7 @@ ibo bought 4 items(s) at a price of 3.24 each for a total of 12.96
 map() function returns a map object(which is an iterator) 
 of the results after applying the given function to each item of a given iterable (list, tuple etc.) Syntax :
 map(fun, iter)
+
 ////////////////////////////////////////////////////
 basic metohd to map a function 
 
@@ -73,6 +74,7 @@ resutls:
 <class 'map'>
 [9, 10, 2, 3]
 [10, 11, 12, 14]
+
 //////////////////////////////////////////////////
 def even_or_odd(num):
     if num%2 == 0:
@@ -90,6 +92,7 @@ results:
 ['The number 1 is Odd', 'The number 2 is Even', 'The number 3 is Odd', 'The number 4 is Even', 'The number 5 is Odd', 
 'The number 6 is Even', 'The number 7 is Odd', 'The number 8 is Even', 'The number 9 is Odd', 'The number 10 is Even', 
 'The number 20 is Even', 'The number 25 is Odd', 'The number 30 is Even']
+
 //////////////////////////////////////////////////
 def add_sub(a,b):
     add = a + b
@@ -161,6 +164,7 @@ results:
 12
 89
 2
+
 //////////////////////////////////////////////////
 a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 newList = list(map( lambda x : x % 2 == 0, a))
@@ -172,6 +176,21 @@ print(newList2)
 result: 
 [False, True, False, True, False, True, False, True, False, True]
 [2, 4, 6, 8, 10]
+
+////////////////////////////////////////////////////
+people = ['Dr. Christopher Brooks', 'Dr. Kevyn Collins-Thompson', 'Dr. VG Vinod Vydiswaran', 'Dr. Daniel Romero']
+
+def split_title_and_name(person):
+    return person.split()[0] + ' ' + person.split()[-1]
+
+#option 1
+for person in people:
+    print(list((lambda person: person.split()[0], person.split()[-1])))
+
+#option 2
+list(filter(lambda person: person.split()[0], person.split()[-1])),people)
+ results:
+ 
 
 
 ##############################################
