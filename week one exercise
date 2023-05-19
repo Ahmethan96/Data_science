@@ -140,13 +140,27 @@ def func1(x):
 
 func2 = lambda x: x + 5
 
+func3 = lambda x,y : x + y
+
+def func4(x):
+    func = lambda x: x + 2
+    return func(x) + 85
+
+func5 = lambda w : w + 1
+
+
 print(func1(5))
 print(func2(5))
+print(func3(4,8))
+print(func4(2))
+print(func5(1))
 
 results: 
 10
 10
-
+12
+89
+2
 
 
 
