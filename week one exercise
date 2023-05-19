@@ -135,11 +135,17 @@ At index 2: cherry
 ##############################################
 lambda function 
 
+def func1(x):
+    return x + 5
 
+func2 = lambda x: x + 5
 
+print(func1(5))
+print(func2(5))
 
-
-
+results: 
+10
+10
 
 
 
