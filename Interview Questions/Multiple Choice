@@ -1,3 +1,15 @@
 ## Interview Queestions 
 
+Question1: Explain the difference between append() and extend() methods in Python lists.
+
+my_list = [1, 2, 3]
+my_list.append(4)
+# Now my_list becomes [1, 2, 3, 4]
+
+my_list = [1, 2, 3]
+my_list.extend([4, 5, 6])
+# Now my_list becomes [1, 2, 3, 4, 5, 6]
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
