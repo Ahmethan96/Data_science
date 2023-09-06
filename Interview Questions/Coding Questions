@@ -8,7 +8,7 @@ Output: True
 
 Answer:
 def is_plaindrom(txt):
-    txt = str(txt).replace(" ", "").replace(",", "").replace(".","")
+    txt = str(txt).replace(" ", "").replace(",", "").replace(".","") # since str is immutable you must assgin back to txt
     return txt == txt[::-1]
 
 word = "a man, a plan, a canal, panama."
