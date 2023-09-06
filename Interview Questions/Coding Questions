@@ -14,3 +14,38 @@ def is_plaindrom(txt):
 word = "a man, a plan, a canal, panama."
 print(is_plaindrom(word))
 ///////////////////////////////////////////////////////////////////////////////////
+
+Question:
+Create a Python class called BankAccount which represents a bank account, having the following functionalities:
+
+1 - __init__ method that initializes a new BankAccount with a given balance (default to 0).
+2 - deposit method to deposit a specified amount into the bank account.
+3 - withdraw method to withdraw a specified amount from the bank account. If the withdrawal amount is greater than the current balance, print "Insufficient funds."
+4 - get_balance method to return the current balance.
+
+Answer:
+class BankAccount():
+    def __init__(self, balance):
+        self.total = balance
+
+    def deposite(self, amount_deposite):
+        self.total += amount_deposite
+
+    def withdraw(self, withdraw):
+        if withdraw > self.total:
+            print("Insufficint amount")
+        else:
+            self.total -= withdraw
+
+    def get_balance(self):
+        # self.get_balance = self.total
+        # return self.get_balance ## Do not over write
+        return self.total
+
+acount1 = BankAccount(100)
+acount1.deposite(500)
+print(acount1.get_balance())
+acount1.withdraw(1100)
+print(acount1.get_balance())
+///////////////////////////////////////////////////////////////////////////////////
+
