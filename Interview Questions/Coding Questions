@@ -1,0 +1,16 @@
+## Coding Questions 
+Question: Write a Python function to check if a given string is a palindrome. A palindrome is a word, phrase, or sequence of characters that reads the same backward as forward, ignoring spaces, punctuation, and capitalization.
+
+Example:
+
+Input: "racecar"
+Output: True
+
+Answer:
+def is_plaindrom(txt):
+    txt = str(txt).replace(" ", "").replace(",", "").replace(".","")
+    return txt == txt[::-1]
+
+word = "a man, a plan, a canal, panama."
+print(is_plaindrom(word))
+///////////////////////////////////////////////////////////////////////////////////
