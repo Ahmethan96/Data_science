@@ -49,3 +49,34 @@ acount1.withdraw(1100)
 print(acount1.get_balance())
 ///////////////////////////////////////////////////////////////////////////////////
 
+Question:
+Find the First Non-Repeating Character
+
+Given a string, find the first character that does not repeat anywhere in the string. Implement a function:
+def first_non_repeating_char(s: str) -> str:
+
+
+Answer:
+def first_non_repeating_char(s):
+    # Create a dictionary to store the frequency of each character in the string.
+    frequency = {}
+    
+    # Iterate through the string and update the frequency dictionary.
+    for char in s:
+        if char in frequency:
+            frequency[char] += 1
+        else:
+            frequency[char] = 1
+    
+    # Iterate through the string again and find the first non-repeating character.
+    for char in s:
+        if frequency[char] == 1:
+            return char
+    
+    # Return an empty string if no non-repeating character is found.
+    return ""
+
+# Example usage:
+s = "swiss"
+print(first_non_repeating_char(s))  # Output: "w"
+
