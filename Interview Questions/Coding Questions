@@ -79,4 +79,36 @@ def first_non_repeating_char(s):
 # Example usage:
 s = "swiss"
 print(first_non_repeating_char(s))  # Output: "w"
+///////////////////////////////////////////////////////////////////////////////////
+
+Question: Given a list of integers, write a Python function that returns the sum of all even numbers in the list minus the sum of all odd numbers. 
+The function should be able to handle an empty list and should be implemented without using any loops.
+input_list = [1, 2, 3, 4, 5]
+output = your_function(input_list)
+# Expected output: -3, because (2 + 4) - (1 + 3 + 5) = -3
+
+Answer_1: 
+def calculate_even_odd_difference(nums):
+    even_sum = sum(num for num in nums if num % 2 == 0)
+    odd_sum = sum(num for num in nums if num % 2 != 0)
+    return even_sum - odd_sum
+
+Answer_2:
+def my_function(my_input):
+    odd_list = [] 
+    even_list = [] 
+    for i in my_input:
+        if i % 2 == 0:
+            even_list.append(i)
+        else: 
+            odd_list.append(i)
+    
+    return ((sum(even_list)) - (sum(odd_list)))
+
+
+print(my_function(input_list))
+
+
+
+
 
