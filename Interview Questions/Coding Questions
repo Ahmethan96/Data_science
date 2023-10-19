@@ -110,7 +110,25 @@ print(my_function(input_list))
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+Question:
+Given a list of numbers, write a Python function that returns a new list with all the duplicate numbers removed and maintains the original order of the numbers.
 
+Example:
+Input: [1, 2, 4, 2, 5, 3, 8, 3, 6]
+Output: [1, 2, 4, 5, 3, 8, 6]
+
+Answer_2:
+def ibo(number):
+    ibo_list = []
+    for i in range(len(number)):
+        if number[i] not in number[i+1:]:
+            ibo_list.append(number[i])
+    return ibo_list
+
+ibosi = [1, 2, 4, 2, 5, 3, 8, 3, 6]
+print(ibo(ibosi))
+
+///////////////////////////////////////////////////////////////////////////////////
 
 
 
