@@ -130,6 +130,19 @@ print(ibo(ibosi))
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+Question:
+Write a Python function that takes a string as input and returns the reverse of the string. Do not use any built-in reverse functions or slicing.
+
+Answer_1:
+    def reverse_string(input_string):
+    reversed_str = ""
+    for char in input_string:
+        reversed_str = char + reversed_str # nohtyP
+    return reversed_str
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 
