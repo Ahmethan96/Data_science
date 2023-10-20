@@ -142,6 +142,34 @@ Answer_1:
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+Question:
+Write a Python function that takes a string as input and returns the first non-repeated character in the string. If all characters are repeated, return None.
+
+Example:
+
+Input: "programming"
+Output: "p"
+
+Input: "aaabbbccc"
+Output: None
+
+Answer_2:
+def calc(word):
+    for i in range(len(word)):
+        if word[i] not in word[i+1:]:
+            return word[i]
+        else:
+            return None
+        
+# print(calc("rogorammipng"))
+word = "rogorammipng"
+# print(calc(word))
+# print(word[2:])
+    
+if word[5] not in word[6:]:
+    print(word[5])
+else:
+    print(word)
 
 
 
