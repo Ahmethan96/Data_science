@@ -171,6 +171,26 @@ if word[5] not in word[6:]:
 else:
     print(word)
 
+///////////////////////////////////////////////////////////////////////////////////
+
+Question:
+Write a Python function to remove duplicates from a list while preserving the original order of elements. You can use a loop or any suitable technique.
+
+Answer_1:
+def duplicatess(numbers):
+    uni_list = [] 
+    for item in numbers:
+        if item not in uni_list:
+            uni_list.append(item)
+    return uni_list 
+
+
+print(duplicatess([2, 3, 2, 4, 5, 3, 6]))
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 
 
