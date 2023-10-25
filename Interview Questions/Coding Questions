@@ -189,6 +189,21 @@ print(duplicatess([2, 3, 2, 4, 5, 3, 6]))
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+Question: Find the Missing Number in an Array
+You are given an array containing n distinct numbers taken from 0 to n. One number is missing from the array. Write a Python function to find the missing number.
+
+Answer_2:
+def missing_number(missing_list):
+
+    ibo_list = [] 
+    for i in range(min(missing_list), max(missing_list)):
+        if i not in missing_list:
+            ibo_list.append(i)
+    return ibo_list[0]
+
+print(missing_number([9, 6, 4, 2, 3, 5, 7, 0, 1]))
+
+///////////////////////////////////////////////////////////////////////////////////
 
 
 
