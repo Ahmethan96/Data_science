@@ -205,8 +205,23 @@ print(missing_number([9, 6, 4, 2, 3, 5, 7, 0, 1]))
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+Question: Create a Simple Class and Method
 
+Write a Python class called Person. 
+This class should have an __init__ method that initializes the name attribute and a method called greet that prints a greeting message with the person's name.
 
+Answer_2:
+class Person:
+    def __init__(self, name):
+        self.name = name 
+
+    def greeting(self):
+        #print(f"hi there {self.name}, how are you?") 
+        return f"hi there {self.name}, how are you?"
+    
+
+person = Person("ibo")
+print(person.greeting())
 
 
 
