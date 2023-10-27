@@ -260,6 +260,37 @@ input_str = "abcabcbb"
 result = length_of_longest_substring(input_str)
 print(result)  # Output: 3
 
+//////////////////////////////////////////////////////////////////////////////////////////
 
+Question: Find the Missing Number
+
+You are given a list of numbers from 1 to n, but one number is missing. Write a Python function to find the missing number.
+
+For example, if you are given the list [1, 2, 4, 6, 3, 7, 8], the missing number is 5.
+
+Answer_1:
+def find_missing_number(nums, n):
+    expected_sum = n * (n + 1) // 2  # Sum of numbers from 1 to n
+    actual_sum = sum(nums)  # Sum of elements in the given list
+    missing_number = expected_sum - actual_sum
+    return missing_number
+
+# Example usage:
+input_list = [1, 2, 4, 6, 3, 7, 8]
+n = 8  # Assuming the list should contain numbers from 1 to n
+
+missing_number = find_missing_number(input_list, n)
+print(missing_number)  # Output: 5
+
+Answer_2:
+def ibo(num_lis):
+   full_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+   for i in full_list:
+      if i not in num_lis:
+         return i
+
+ibrahim = [1, 2, 4, 6, 3, 7, 8]
+
+print(ibo(ibrahim))
 
 
