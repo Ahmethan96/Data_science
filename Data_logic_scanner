@@ -1,0 +1,33 @@
+from openpyxl import Workbook, load_workbook
+wb = load_workbook('oem.xlsx')
+ws = wb.active
+
+import tkinter as tk
+
+import tkinter as tk
+
+def on_button_click():
+    user_input = entry.get()
+    label.config(text=f"Hello, {user_input}!")
+
+# Create the main window
+window = tk.Tk()
+window.title("Simple UI")
+
+# Create an entry widget for user input
+entry = tk.Entry(window, width=30)
+entry.pack(pady=10)
+
+# Create a button
+button_yes = tk.Button(window, text="Yes", command=on_button_click)
+button_yes.pack(pady=10)
+
+button_no = tk.Button(window, text="No", command= on_button_click)
+button_no.pack(pady=15)
+
+# Create a label
+label = tk.Label(window, text="Enter your name:")
+label.pack(pady=10)
+
+# Run the main loop
+window.mainloop()
