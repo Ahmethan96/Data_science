@@ -30,3 +30,43 @@ entry.pack(pady=10)
 
 # Run the main loop
 window.mainloop()
+
+
+////////////////////////////////////////////////////////////////////////////////////
+last update 28.11.2023
+///////////////////////////////////////////////////////////////////////////////////
+from openpyxl import Workbook, load_workbook
+import tkinter as tk
+
+wb = load_workbook('oem.xlsx')
+ws = wb.active
+
+def find_serial_number(user_input):
+    for row in ws.iter_rows(min_row=2, values_only=True):  # Assuming data starts from the second row
+        if row[0] == user_input:
+            return row[1]  # Assuming the serial number is in the second column
+    return "Serial number not found"
+
+def on_button_click():
+    user_input = entry.get()
+    serial_number = find_serial_number(float(user_input))
+    label.config(text=f"The scanned product is: {serial_number}")
+    return user_input
+
+# Create the main window
+window = tk.Tk()
+window.title("Simple UI")
+
+# Create button, label, and entry widgets
+button_check = tk.Button(window, text="Check product", command=on_button_click)
+button_check.pack(pady=15)
+
+label = tk.Label(window, text="Scan product:")
+label.pack(pady=10)
+
+entry = tk.Entry(window, width=30)
+entry.pack(pady=10)
+
+# Run the main loop
+window.mainloop()
+
