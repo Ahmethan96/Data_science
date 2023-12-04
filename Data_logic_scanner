@@ -264,3 +264,93 @@ entry.pack(pady=10)
 
 # Run the main loop
 window.mainloop()
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+Client and UI integrated code updated version 1 04.12.2023
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+from openpyxl import Workbook, load_workbook
+import tkinter as tk
+import socket
+
+wb = load_workbook('exe_client/oem.xlsx')
+ws = wb.active
+
+def find_serial_number(user_input):
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        if row[0] == user_input:
+            return row[1]
+    return "Serial number not found"
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+def send_message_to_device(message):
+    try:
+        # s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        ip_address = '192.168.3.101'  # Change to your device's IP
+        port = 1023  # Change to your device's port
+        s.connect((ip_address, port))
+        s.sendall(message.encode())
+        data = s.recv(1)
+        print('Received', repr(data))
+        # s.sendall(message)
+
+        print('Message sent successfully')
+
+        # data = s.recv(10)
+        # print('Received', repr(data))
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+    finally:
+        # Close the socket
+        s.close()
+        print("Socket closed1")
+    # except Exception as e:
+    #     print(f"Error sending message: {e}")
+    # finally:
+    #     s.close()
+
+def on_button_click():
+    message1 = '\x1B[C\x1B[B\n'
+    message2 = "SAVE FROM PYTHON1\n\x1B[A\n"
+    user_input = entry.get()
+    user_input1 = message1+"\n"+"MATCH"+" "+user_input +"\n"+"MATCH " +user_input + "\n"+ message2 # do not forget adding MATCH command.
+    serial_number = find_serial_number(float(user_input))
+    label.config(text=f"The scanned product is: {serial_number}")
+
+    # Send message to device
+    message = f"SCAN:{user_input1}\n"  # combining all 3 massages to a single one to be sent to the DL scanner
+    # send_message_to_device(message)
+    print(message)
+    # print("Sending message:", repr(message))
+    send_message_to_device(message)
+    # data = s.recv(10)
+    # print('Received', repr(data))
+    # s.close()
+    print("Socket closed2")
+
+
+    ask_user_yes = tk.Button(window, text="Confirm")
+    ask_user_yes.pack(side=tk.TOP, pady=10, anchor='center')
+
+    ask_user_no = tk.Button(window, text="Reject")
+    ask_user_no.pack(side=tk.TOP, pady=10, anchor='center')
+
+# Create the main window
+window = tk.Tk()
+window.title("Simple UI")
+
+# Create button, label, and entry widgets
+button_check = tk.Button(window, text="Check product", command=on_button_click)
+button_check.pack(pady=15)
+
+label = tk.Label(window, text="Scan product:")
+label.pack(pady=10)
+
+entry = tk.Entry(window, width=30)
+entry.pack(pady=10)
+
+# Run the main loop
+window.mainloop()
