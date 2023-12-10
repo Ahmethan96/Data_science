@@ -330,5 +330,43 @@ print(is_plaindrom("A man a plan a canal Panama"))
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
+Write a Python function to find the first non-repeated character in a string.
+For example, for the input "abacabad", the output should be "c" because "c" is the first character that does not repeat.
+
+Answer_1:
+    def first_non_repeated_char(s):
+    char_count = {}
+
+    # Count the occurrences of each character
+    for char in s:
+        char_count[char] = char_count.get(char, 0) + 1
+
+    # Find the first non-repeated character
+    for char in s:
+        if char_count[char] == 1:
+            return char
+
+    # Return None if no non-repeated character is found
+    return None
+
+Answer_2: 
+    #test = "abacabad"
+    test = "hello"
+    #test = "aabbcc"
+    # print(test[3:])
+
+    for i in range(len(test)):
+        if test[i] not in test[i+1:]:
+            print(f"the non repeated letter is {test[i]}")
+            break
+        else:
+            print("No non-repeated character")
+            break
+    def first_non_repeated_char(s):
+        pass
+
+
+
+
 
 
