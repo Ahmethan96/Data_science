@@ -294,3 +294,41 @@ ibrahim = [1, 2, 4, 6, 3, 7, 8]
 print(ibo(ibrahim))
 
 
+//////////////////////////////////////////////////////////////////////////////////////////
+
+Question: Write a Python function to check if a given string is a palindrome. A palindrome is a word, phrase, number,
+or other sequences of characters that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
+
+Answer_1: 
+    def is_palindrome(s):
+    # Remove spaces and convert to lowercase
+    s = ''.join(s.split()).lower()
+    
+    # Check if the string is equal to its reverse
+    return s == s[::-1]
+
+    # Test cases
+    print(is_palindrome("radar"))  # True
+    print(is_palindrome("Hello"))  # False
+    print(is_palindrome("A man a plan a canal Panama"))  # True
+
+Answer_2: 
+    def is_plaindrom(s):
+    ibo = ""
+    for i in range((len(s)-1), -1, -1):
+        # print(s[i],end="")
+        ibo += s[i]
+    if s == ibo:
+        print("Well done!")
+    else:
+        print("try again later")
+    return ibo, s
+
+print(is_plaindrom("A man a plan a canal Panama"))
+# print(is_plaindrom("radar"))
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+
